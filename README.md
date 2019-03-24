@@ -18,7 +18,11 @@ cd carmarket
 composer install
 composer dump-autoload
 ```
-Before you visit the page on your localhost, you should import db schema through MySQL workbench, HeidiSQL or something else...
+Before you visit the page on your localhost, you should import db schema through MySQL workbench, HeidiSQL or something else...\
+db schema is located in:
+```
+./db_backup/main_schema.sql
+```
 
 ## Note about PHPMailer
 This app uses PHPMailer which uses Google's Gmail API to send e-mails. You should specify your own username (email) and password for that to work in:
