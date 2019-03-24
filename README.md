@@ -14,6 +14,7 @@ A car market web-app for selling second-hand and new vehicles (currently only ca
 ## Installation
 ```
 git clone https://github.com/andrijanovakovic/carmarket.git
+cd carmarket
 composer install
 composer dump-autoload
 ```
@@ -24,4 +25,3 @@ This app uses PHPMailer which uses Google's Gmail API to send e-mails. You shoul
 ```
 ./app/config/<your_config_name>.php
 ```
-"# carmarket" 
