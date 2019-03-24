@@ -23,5 +23,15 @@ Before you visit the page on your localhost, you should import db schema through
 ## Note about PHPMailer
 This app uses PHPMailer which uses Google's Gmail API to send e-mails. You should specify your own username (email) and password for that to work in:
 ```
-./app/config/<your_config_name>.php
+./app/config/test.php
+```
+
+## App config
+App mode is defined in:
+```
+./mode.php
+```
+This means that if the content of ./mode.php is "development", app will search for `development.php` in:
+```
+./app/config/
 ```

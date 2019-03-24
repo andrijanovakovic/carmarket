@@ -1,3 +1,5 @@
 vendor/
-app/config/
+app/config/development.php
+app/config/production.php
 *.cache
+uploads/
