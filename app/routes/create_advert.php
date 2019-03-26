@@ -1,5 +1,7 @@
 <?php
 
+use Carbon\Carbon;
+
 $app->get('/create_advert', $authenticated(), function () use ($app) {
     $app->render('create_advert.php');
 })->name('create_advert');
@@ -91,6 +93,7 @@ $app->post('/create_advert', $authenticated(), function () use ($app) {
             'body_color' => $body_color,
             'body_door_count' => $body_door_count,
             'description' => $description,
+            'expires' => Carbon::now()->addMonth(1),
         ]);
     
     $images_count = count($advert_images_blobs);

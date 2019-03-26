@@ -86,7 +86,7 @@
 
             <div class="form-row">
                 <div class="form-group col-md-12">
-                    <label for="description">Opis</label>
+                    <label for="description">Description</label>
                     <textarea name="description" class="form-control" rows="5"></textarea>
                 </div>
             </div>

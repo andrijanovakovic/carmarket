@@ -3,13 +3,13 @@
         <li class="nav-item">
             <a class="nav-link active" href="{{ urlFor('home') }}">Home</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link active" href="{{ urlFor('categories') }}">Categories</a>
-        </li>
 
         {% if auth %}
             <li class="nav-item">
                 <a class="nav-link" href="{{ urlFor('create_advert') }}">Create new advert</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ urlFor('my_adverts') }}">My adverts</a>
             </li>
 
             <li class="nav-item" style="margin-left: 60px">

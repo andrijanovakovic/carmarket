@@ -8,7 +8,7 @@
         Register
     </div>
     <div class="card-body">
-        <form class="register_register_form" action="{{ urlFor('register.post')}}" method="post">
+        <form class="register_register_form" action="{{ urlFor('register.post')}}" method="post" autocomplete="on">
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="text" class="form-control" name="email" id="email" {% if request.post('email') %} value="{{ request.post('email') }}"

@@ -3,6 +3,7 @@
 return [
     'app' => [
         'url' => 'http://localhost:1234',
+        'app_url' => 'http://localhost:1234/sp_n1_v3/public',
         'hash' => [
             'algo' => PASSWORD_BCRYPT,
             'cost' => 10,
@@ -11,10 +12,10 @@ return [
     ],
     'db' => [
         'driver' => 'mysql',
-        'host' => '127.0.0.1',
+        'host' => '<mysql_host_ip_or_url_here>',
         'name' => 'sp_n1_v3',
-        'username' => '<place_your_mysql_user_username>',
-        'password' => '<place_your_mysql_user_username>',
+        'username' => '<mysql_user_username_here>',
+        'password' => '<mysql_user_password_here>',
         'charset' => "utf8mb4",
         'collation' => 'utf8mb4_unicode_ci',
     ],
@@ -29,8 +30,8 @@ return [
         'smtp_auto_tls' => false,
         'host' => 'smtp.gmail.com',
         'port' => 587,
-        'username' => '<place_your_username_here_for_gmail>',
-        'password' => '<place_your_password_here_for_gmail>',
+        'username' => '<gmail_account_mail_here>',
+        'password' => '<gmail_account_password_here>',
         'smtp_keep_alive' => true,
         'mailer' => 'smtp',
         'smtp_options_ssl_verify_peer' => false,

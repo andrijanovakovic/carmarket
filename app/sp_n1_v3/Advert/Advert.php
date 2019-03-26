@@ -23,5 +23,7 @@ class Advert extends Eloquent
         'body_color',
         'body_door_count',
         'description',
+        'expires',
+        'views',
     ];
 }

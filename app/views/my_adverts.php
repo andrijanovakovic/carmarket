@@ -1,37 +1,22 @@
 {% extends 'templates/default.php' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}My adverts{% endblock %}
 
 {% block content %}
 
-{% if all_ads_count == 0 %}
+{% if adverts is empty %}
 <div class="card" style="width: 70%; display: block;">
     <div class="card-header">
-        Still nothing...
+        No ads :(
     </div>
     <div class="card-body">
-        There are no ads in our database currently.
+        Click <a href="{{ urlFor('create_advert') }}" class="btn btn-primary">here</a> to create your ad :)
     </div>
 </div>
-{% endif %}
-
-{% if active_ads_count == 0 %}
-<div class="card" style="width: 70%; display: block;">
-    <div class="card-header">
-        We don't have active ads currently...
-    </div>
-    <div class="card-body">
-        You just have to wait for someone to post, or post it yourself :)
-        <p>Number of adverts in our database: {{ all_ads_count }}</p>
-        <p>Number of active adverts in our database: {{ active_ads_count }}</p>
-        <p>Number of inactive adverts in our database: {{ inactive_ads_count }}</p>
-    </div>
-</div>
-{% endif %}
-
-{% if active_ads_count > 0 %}
+{% else %}
 <div style="display: flex; flex-direction: column; width: 100%; align-items:center;">
     {% for advert in adverts %}
+
     <a href="{{ urlFor('advert.detail', { advert_id: advert.id }) }}" class="card advert"
         style="width: 70%;margin-bottom: 10px; text-decoration: none;">
         <div>
@@ -39,7 +24,10 @@
                 <p style=" text-align:left"> ({{ advert.car_make_year_and_month}})
                     <b>{{advert.car_manufacturer}} {{ advert.car_model }}</b></p>
                 <p style="text-align:right"><b>&#8364 {{advert.car_price}}&nbsp&nbsp</b>Posted:
-                    {{ advert.created_at|date('d/M/Y') }}, Viewed: {{advert.views}} times</p>
+                    {{ advert.created_at|date('d/M/Y H:i:s') }}, Viewed: {{advert.views}} times</p>
+                {% if advert.expired %}
+                    <b>This ad has expired on: {{ advert.expires|date('d/M/Y H:i:s') }}</b>
+                {% endif %}
             </div>
             <div class="card-body" style="display: flex; flex-direction:row">
                 <div style="max-width: 200px; margin-right: 15px">
@@ -68,16 +56,6 @@
         </div>
     </a>
     {% endfor %}
-    <div class="card advert" style="width: 70%; margin-top:30px">
-        <div class="card-header" style="display: flex; flex-direction:row; justify-content: space-between;">
-            <p style=" text-align:left">Stats</p>
-        </div>
-        <div class="card-body" style="display: flex; flex-direction:column">
-            <p>Number of adverts in our database: {{ all_ads_count }}</p>
-            <p>Number of active adverts in our database: {{ active_ads_count }}</p>
-            <p>Number of inactive adverts in our database: {{ inactive_ads_count }}</p>
-        </div>
-    </div>
 </div>
 {% endif %}
 

@@ -1,100 +1,111 @@
 /* GLOBAL VARIABLES HERE */
 :root {
-    --main-navbar-background-color: #08171F;
-    --main-anchor-color: #fff;
-    --main-anchor-hover-color: #c8dddd;
-    --main-content-and-navbar-width: 70%;
-    --main-footer-background-color: #08171F;
-    --main-default-content-background: #1c282e;
-    --main-card-background: #344148;
+	--main-navbar-background-color: #08171f;
+	--main-anchor-color: #fff;
+	--main-anchor-hover-color: #c8dddd;
+	--main-content-and-navbar-width: 70%;
+	--main-footer-background-color: #08171f;
+	--main-default-content-background: #1c282e;
+	--main-card-background: #344148;
 }
 
 .card {
-    color: white;
-    background: var(--main-card-background);
+	color: white;
+	background: var(--main-card-background);
 }
 
-html, 
+html,
 body {
-    height: 100%;
+	height: 100%;
 }
 
 .nav {
-    width: var(--main-content-and-navbar-width);
+	width: var(--main-content-and-navbar-width);
 }
 
 .nav-item {
-    /* border-left: 0.5px solid var(--main-anchor-color); */
-    font-weight: bold;
+	/* border-left: 0.5px solid var(--main-anchor-color); */
+	font-weight: bold;
 }
 
 a {
-    color: var(--main-anchor-color);
+	color: var(--main-anchor-color);
 }
 a:hover {
-    color: var(--main-anchor-hover-color);
+	color: var(--main-anchor-hover-color);
 }
 p {
-    margin: 0px;
-    padding: 0px;
+	margin: 0px;
+	padding: 0px;
 }
 .default_main_content {
-    background: var(--main-default-content-background);
-    padding: 20px 0px;
-    display: flex;
-    justify-content: center;
-    min-height: 100%;
-    padding-bottom:60px;
+	background: var(--main-default-content-background);
+	padding: 20px 0px;
+	display: flex;
+	justify-content: center;
+	min-height: 100%;
+	padding-bottom: 60px;
 }
 
 .footer_main_footer_container {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    min-height: 30%;
-    color: var(--main-anchor-color);
-    background: var(--main-footer-background-color);
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	min-height: 30%;
+	color: var(--main-anchor-color);
+	background: var(--main-footer-background-color);
 }
 
 .navigation_main_navbar_container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background: var(--main-navbar-background-color);
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	background: var(--main-navbar-background-color);
 }
 
 .register_register_error {
-    display: inline-block;
-    margin: 0;
-    margin-top: 5px;
-    padding: 0;
-    background: var(--red);
-    width: 100%;
-    border-radius: 4px;
-    padding: 5px;
-    padding-left:15px;
+	display: inline-block;
+	margin: 0;
+	margin-top: 5px;
+	padding: 0;
+	background: var(--red);
+	width: 100%;
+	border-radius: 4px;
+	padding: 5px;
+	padding-left: 15px;
 }
 
 .default_alert {
-    margin: 0px;
-    z-index: 999;
-    padding: 20px;
-    text-align: center;
-    background: slategray;
+	margin: 0px;
+	z-index: 999;
+	padding: 20px;
+	text-align: center;
+	background: slategray;
 }
 
 .footer_main_content_container {
-    display: flex;
-    align-items: center;
-    text-align: center;
+	display: flex;
+	align-items: center;
+	text-align: center;
 }
 
 .advert:hover {
-    cursor: pointer;
-    background: #48545a;
+	cursor: pointer;
+	background: #48545a;
 }
 
 .home_car_advert_profile_img {
-    width: 100%;
-    border-radius: 6px;
+	width: 100%;
+	border-radius: 6px;
+}
+
+.advert_detail_images_container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.advert_detail_images_container_image {
+	width: 400px;
+	border-radius: 6px;
 }
