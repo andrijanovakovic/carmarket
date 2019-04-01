@@ -82,6 +82,7 @@ $app->post('/add_comment/:advert_id', function ($advert_id) use ($app) {
 $app->get('/comments', function () use ($app) {
     $comments = $app->advert_comment->orderBy('created_at', 'DESC')->get();
     $app->render('comments.php', [
-        'comments' => $comments
+        'comments' => $comments,
+        'comments_count' => $comments->count(),
     ]);
 })->name('comments');

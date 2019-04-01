@@ -27,3 +27,17 @@ $app->get('/', function () use ($app) {
         'inactive_ads_count' => $inactive_ads_count,
     ]);
 })->name('home');
+
+$app->get('/all_users', function () use ($app) {
+    $users = $app->user->where('active_record', 1)->get();
+
+     // for each advert get corresponding profile image
+     $users->each(function ($user) use ($app) {
+        $user->ads_count = $app->advert->where('user_id', $user->id)->get()->count();
+        $user->user_info = $app->user_info->where('user_id', $user->id)->first();
+    });
+
+    $app->render('all_users.php', [
+        'users' => $users,
+    ]);
+})->name('all_users');

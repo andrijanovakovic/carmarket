@@ -14,6 +14,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ urlFor('comments') }}">Comments</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ urlFor('all_users') }}">All users</a>
+            </li>
 
             <li class="nav-item" style="margin-left: 60px">
                 <a class="nav-link disabled" href="#">Logged in with {{auth.email}}</a>
@@ -30,6 +33,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ urlFor('comments') }}">Comments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ urlFor('all_users') }}">All users</a>
             </li>
         {% endif%}
     </ul>
