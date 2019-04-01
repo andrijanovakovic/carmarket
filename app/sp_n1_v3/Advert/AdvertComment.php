@@ -13,5 +13,7 @@ class AdvertComment extends Eloquent
         'value',
         'nickname',
         'email',
+        'ip_address',
+        'ip_country_of_origin',
     ];
 }

@@ -40,11 +40,33 @@ CREATE TABLE IF NOT EXISTS `advert` (
   `expires` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `views` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Dumping data for table sp_n1_v3.advert: ~0 rows (approximately)
+DELETE FROM `advert`;
 /*!40000 ALTER TABLE `advert` DISABLE KEYS */;
 /*!40000 ALTER TABLE `advert` ENABLE KEYS */;
+
+-- Dumping structure for table sp_n1_v3.advert_comment
+DROP TABLE IF EXISTS `advert_comment`;
+CREATE TABLE IF NOT EXISTS `advert_comment` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `advert_id` int(11) NOT NULL,
+  `value` text COLLATE utf8mb4_unicode_ci,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `nickname` text COLLATE utf8mb4_unicode_ci,
+  `email` text COLLATE utf8mb4_unicode_ci,
+  `user_id` int(11) DEFAULT NULL,
+  `ip_address` varchar(48) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ip_country_of_origin` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Dumping data for table sp_n1_v3.advert_comment: ~0 rows (approximately)
+DELETE FROM `advert_comment`;
+/*!40000 ALTER TABLE `advert_comment` DISABLE KEYS */;
+/*!40000 ALTER TABLE `advert_comment` ENABLE KEYS */;
 
 -- Dumping structure for table sp_n1_v3.advert_image
 DROP TABLE IF EXISTS `advert_image`;
@@ -55,9 +77,10 @@ CREATE TABLE IF NOT EXISTS `advert_image` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Dumping data for table sp_n1_v3.advert_image: ~0 rows (approximately)
+DELETE FROM `advert_image`;
 /*!40000 ALTER TABLE `advert_image` DISABLE KEYS */;
 /*!40000 ALTER TABLE `advert_image` ENABLE KEYS */;
 
@@ -76,9 +99,10 @@ CREATE TABLE IF NOT EXISTS `user` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Dumping data for table sp_n1_v3.user: ~0 rows (approximately)
+DELETE FROM `user`;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 
@@ -104,9 +128,10 @@ CREATE TABLE IF NOT EXISTS `user_info` (
   `first_login` tinyint(1) NOT NULL DEFAULT '1',
   `zip` varchar(16) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Dumping data for table sp_n1_v3.user_info: ~0 rows (approximately)
+DELETE FROM `user_info`;
 /*!40000 ALTER TABLE `user_info` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user_info` ENABLE KEYS */;
 
@@ -119,6 +144,7 @@ CREATE TABLE IF NOT EXISTS `user_type` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Dumping data for table sp_n1_v3.user_type: ~3 rows (approximately)
+DELETE FROM `user_type`;
 /*!40000 ALTER TABLE `user_type` DISABLE KEYS */;
 INSERT INTO `user_type` (`id`, `type`) VALUES
 	(1, 'regular'),

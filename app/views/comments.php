@@ -18,6 +18,8 @@
                 <div class="container">
                     <p>Posted by (email): {{ comment.email }}</p>
                     <p>Posted by (nickname): {{ comment.nickname }}</p>
+                    <p>Client ip: {{ comment.ip_address }}</p>
+                    <p>Client country: {{ comment.ip_country_of_origin }}</p>
                 </div>
             </div>
         </div>
