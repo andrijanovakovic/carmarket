@@ -21,6 +21,10 @@ $app->get('/ad/:advert_id', function ($advert_id) use ($app) {
 
         $advert->images = $images;
 
+        // get advert comments
+        $comms = $app->advert_comment->where('advert_id', $advert->id)->orderBy('created_at', 'DESC')->get();
+        $advert->comments = $comms;
+
         // increment views for the advert
         $app->advert->find($advert_id)->increment('views', 1);
 
@@ -156,4 +160,3 @@ $app->post('/ad/:advert_id', $authenticated, function ($advert_id) use ($app) {
         $app->response->redirect($app->urlFor('home'));
     }
 })->name('advert_delete');
-

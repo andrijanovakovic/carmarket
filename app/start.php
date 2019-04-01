@@ -18,6 +18,7 @@ use sp_n1_v3\User\UserInfo;
 use sp_n1_v3\User\UserType;
 use sp_n1_v3\Advert\Advert;
 use sp_n1_v3\Advert\AdvertImage;
+use sp_n1_v3\Advert\AdvertComment;
 use sp_n1_v3\Helpers\Hash;
 use sp_n1_v3\Validation\Validator;
 use sp_n1_v3\Middleware\BeforeRequest;
@@ -67,6 +68,7 @@ require 'routes.php';
 
 // initial user state
 $app->auth = false;
+$app->current_user_info = false;
 
 // set user model into Eloquent container
 $app->container->set('user', function () {
@@ -83,6 +85,9 @@ $app->container->set('advert', function () {
 });
 $app->container->set('advert_image', function () {
     return new AdvertImage;
+});
+$app->container->set('advert_comment', function () {
+    return new AdvertComment;
 });
 
 

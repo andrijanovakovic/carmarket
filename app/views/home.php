@@ -15,7 +15,7 @@
 </div>
 {% endif %}
 
-{% if active_ads_count == 0 %}
+{% if active_ads_count == 0 and all_ads_count != 0 %}
 <div class="card" style="width: 70%; display: block;">
     <div class="card-header">
         We don't have active ads currently...

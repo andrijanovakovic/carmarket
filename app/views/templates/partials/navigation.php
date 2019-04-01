@@ -11,6 +11,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ urlFor('my_adverts') }}">My adverts</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ urlFor('comments') }}">Comments</a>
+            </li>
 
             <li class="nav-item" style="margin-left: 60px">
                 <a class="nav-link disabled" href="#">Logged in with {{auth.email}}</a>
@@ -24,7 +27,10 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ urlFor('login') }}">Login</a>
-            </li> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ urlFor('comments') }}">Comments</a>
+            </li>
         {% endif%}
     </ul>
 </div>
