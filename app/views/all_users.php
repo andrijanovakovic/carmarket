@@ -6,9 +6,9 @@
 
 <div style="display: flex; flex-direction: column; width: 100%; align-items:center;">
     {% for user in users %}
-    <div class="card" style="width:70%;">
+    <div class="card" style="width:70%;margin-bottom:10px;">
         <div class="card-header" style="display: flex; flex-direction:row; justify-content: space-between;">
-            <p style=" text-align:left">{{ user.user_info.first_name }} {{ user.user_info.last_name }}</p>
+            <p style=" text-align:left">{{ user.user_info.first_name }} {{ user.user_info.last_name }} ({{user.username}})</p>
             <p style="text-align:right">Created: {{ user.created_at|date('d/M/Y H:s:i') }}</p>
         </div>
         <div class="card-body">

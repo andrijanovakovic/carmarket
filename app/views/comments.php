@@ -6,10 +6,9 @@
 
 
 <div style="display: flex; flex-direction: column; width: 100%; align-items:center;">
-    <div> No comments... </div>asd
     {% if comments_count > 0 %}
         {% for comment in comments %}
-        <a href="{{ urlFor('advert.detail', { advert_id: comment.advert_id }) }}" class="card advert"
+        <a href="{{ urlFor('advert.detail', { advert_id: comment.advert_id }) }}" class="card"
             style="width: 70%;margin-bottom: 10px; text-decoration: none;">
             <div>
                 <div class="card-header" style="display: flex; flex-direction:row; justify-content: space-between;">
@@ -29,7 +28,7 @@
         </a>
         {% endfor %}
     {%else%}
-        <div class="card advert"
+        <div class="card"
             style="width: 70%;margin-bottom: 10px; text-decoration: none; height: 100px; padding: 10px">
             No comments in our db...
         </div>

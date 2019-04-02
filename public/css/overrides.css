@@ -3,7 +3,7 @@
 	--main-navbar-background-color: #08171f;
 	--main-anchor-color: #fff;
 	--main-anchor-hover-color: #c8dddd;
-	--main-content-and-navbar-width: 70%;
+	--main-content-and-navbar-width: 80%;
 	--main-footer-background-color: #08171f;
 	--main-default-content-background: #1c282e;
 	--main-card-background: #344148;
@@ -23,6 +23,14 @@ body {
 	width: var(--main-content-and-navbar-width);
 }
 
+.nav_bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+}
+
 .nav-item {
 	/* border-left: 0.5px solid var(--main-anchor-color); */
 	font-weight: bold;
@@ -31,13 +39,16 @@ body {
 a {
 	color: var(--main-anchor-color);
 }
+
 a:hover {
 	color: var(--main-anchor-hover-color);
 }
+
 p {
 	margin: 0px;
 	padding: 0px;
 }
+
 .default_main_content {
 	background: var(--main-default-content-background);
 	padding: 20px 0px;
@@ -60,7 +71,10 @@ p {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	background: var(--main-navbar-background-color);
+    background: var(--main-navbar-background-color);
+    text-align: center;
+    align-items: center;
+    align-content: center;
 }
 
 .register_register_error {

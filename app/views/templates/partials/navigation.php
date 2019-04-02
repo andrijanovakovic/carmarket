@@ -1,5 +1,5 @@
 <div class="navigation_main_navbar_container">
-    <ul class="nav">
+    <ul class="nav nav_bar">
         <li class="nav-item">
             <a class="nav-link active" href="{{ urlFor('home') }}">Home</a>
         </li>

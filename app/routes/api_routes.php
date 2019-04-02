@@ -64,8 +64,8 @@ $app->post('/api/add_comment/:advert_id', function ($advert_id) use ($app) {
     $response['Content-Type'] = 'application/json';
     $response_object = array('success' => null);
 
-    if (!$advert_id) {
-        $response_object = array('success' => false, 'reason' => "No id...");
+    if (!$advert_id || !is_numeric($advert_id)) {
+        $response_object = array('success' => false, 'reason' => "No id or id not numeric...");
     } else {
         $request = $app->request;
 
@@ -109,7 +109,7 @@ $app->post('/api/add_comment/:advert_id', function ($advert_id) use ($app) {
                         $country_of_origin = $country_of_origin_request_array["country"];
                     }
 
-                    // insert comment to d
+                    // insert comment to db
                     $new_comment = $app->advert_comment->create([
                         'value' => $comment_value,
                         'email' => $comment_email,
