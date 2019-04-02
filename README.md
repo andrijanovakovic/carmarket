@@ -5,7 +5,7 @@ A car market web-app for selling second-hand and new vehicles (currently only ca
 # Specs
 * [PHP (7.3.2)](http://www.php.net/)
 * [Twig](http://www.slimframework.com) - php micro framework
-* [Slim](http://www.slimframework.com/docs/v3/features/templates.html) - view engine
+* [Slim v2](http://www.slimframework.com/docs/v3/features/templates.html) - view engine
 * [Eloquent db ORM](https://laravel.com/docs/5.8/eloquent) - laravel's orm
 * [MySQL 5.7](https://dev.mysql.com/downloads/mysql/5.7.html) - db
 * [Bootstrap v4.3](https://getbootstrap.com/docs/4.3/getting-started/introduction/) - html, css, js
@@ -21,7 +21,7 @@ composer dump-autoload
 Before you visit the page on your localhost, you should import db schema through MySQL workbench, HeidiSQL or something else...\
 db schema is located in:
 ```
-./db_backup/main_schema.sql
+./db_backup/db_schema.sql
 ```
 
 ## Note about PHPMailer
